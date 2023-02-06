@@ -16,5 +16,5 @@ Feature: Internal Server Error Tests
   Scenario: Verify Internal Server Error the latest response from API
     Given the user makes a GET request to the latest internal server error API endpoint
     When the server encounters an error and returns a 200 Internal Server Error response
-#    Then the response should include a JSON object with the requested data and last updated time
+    Then the response should include a JSON object with the requested data and last updated time
 
