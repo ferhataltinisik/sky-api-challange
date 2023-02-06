@@ -1,6 +1,4 @@
 package step_definitions;
-
-import com.github.javafaker.Faker;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -9,8 +7,6 @@ import testData.Customer;
 import utilities.AssertUtils;
 import utilities.CustomerUtils;
 import testData.*;
-
-import java.util.UUID;
 
 
 public class InternalServerErrorTests {

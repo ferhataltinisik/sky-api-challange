@@ -1,12 +1,5 @@
 package utilities;
-
-import io.restassured.response.Response;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
-
-import java.util.HashMap;
-import java.util.List;
-
 public class AssertUtils {
 
 

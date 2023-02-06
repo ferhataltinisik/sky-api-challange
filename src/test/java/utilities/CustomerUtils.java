@@ -1,5 +1,4 @@
 package utilities;
-
 import io.restassured.response.Response;
 import testData.Customer;
 
