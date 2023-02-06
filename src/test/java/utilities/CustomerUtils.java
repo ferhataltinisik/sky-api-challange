@@ -17,4 +17,9 @@ public class CustomerUtils extends BaseUtils{
         return sendRequest( BaseUtils.POST, url, payload);
     }
 
+    public static Response getTheLatestInternalServerError() {
+        String url = ConfigurationReader.get("baseUri") + ConfigurationReader.get("internal_server_latest_end_point");
+        return sendRequest(BaseUtils.GET, url, null);
+    }
+
 }
