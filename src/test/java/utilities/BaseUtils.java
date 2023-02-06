@@ -8,21 +8,11 @@ import org.json.JSONObject;
 
 
 public class BaseUtils {
-    public static final int SUCCESS_STATUS_CODE = 200;
-    public static final int BAD_REQUEST_STATUS_CODE = 400;
-
     public static final int POST = 1;
     public static final int GET = 2;
     public static final int DELETE = 3;
     public static final int PUT = 4;
 
-    public static String getBaseUri(){
-        return ConfigurationReader.get("baseUri");
-    }
-
-    public static String getBaseUri(String endPoint){
-        return ConfigurationReader.get("baseUri") + endPoint;
-    }
 
     public static JSONObject createJSONPayload(Object object) {
         return new JSONObject(object);

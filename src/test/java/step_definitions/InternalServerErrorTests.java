@@ -58,4 +58,19 @@ public class InternalServerErrorTests {
         AssertUtils.assertEquals(response.jsonPath().get("errors[1].receivedRequest[0]"), customer.getPhoneNumber());
     }
 
+    @Given("the user makes a GET request to the latest internal server error API endpoint")
+    public void theUserMakesAGETRequestToTheLatestInternalServerErrorAPIEndpoint() {
+        response= CustomerUtils.getTheLatestInternalServerError();
+    }
+    @Then("the response should include a JSON object with the requested data and last updated time")
+    public void theResponseShouldIncludeAJSONObjectWithTheRequestedDataAndLastUpdatedTime() {
+        AssertUtils.assertNotNull(response.jsonPath().get("data[0].lastUpdated"));
+        AssertUtils.assertNotNull(response.jsonPath().get("data[1].receivedRequest[0].customerId"));
+        AssertUtils.assertNotNull(response.jsonPath().get("data[1].receivedRequest[0].firstName"));
+        AssertUtils.assertNotNull(response.jsonPath().get("data[1].receivedRequest[0].lastName"));
+        AssertUtils.assertNotNull(response.jsonPath().get("data[1].receivedRequest[0].address"));
+        AssertUtils.assertNotNull(response.jsonPath().get("data[1].receivedRequest[0].phoneNumber"));
+    }
+
+
 }
