@@ -1,7 +1,6 @@
 Feature: Internal Server Error Tests
   This feature includes tests that test the Sky Internal Server Error  RESTFul services
 
-
   Scenario: Verify Internal Server Error GET response from API for GET method
     Given the user makes a request GET to an API endpoint
     When the server encounters an error and returns a 500 Internal Server Error response
